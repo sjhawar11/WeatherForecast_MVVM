@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <import type="com.example.sarvesh.weatherforecast.viewmodel.WeatherListItemViewModel" />
+        <variable
+            name="viewModel"
+            type="WeatherListItemViewModel" ></variable>
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/dayTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@{viewModel.dailyWeather.dt}"/>
+
+        <TextView
+            android:id="@+id/minTempTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@{viewModel.dailyWeather.temp.min}"/>
+
+        <TextView
+            android:id="@+id/maxTempTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@{viewModel.dailyWeather.temp.max}"/>
+    </LinearLayout>
+</layout>
